@@ -56,10 +56,14 @@ String타입뒤에 '+'로 연결해주면 어느 타입이던 String 타입으�
 
 ## 2. Reference DT
 참조형 데이터타입이라는 뜻이다. 유저가 정의하는 데이터 타입(User define DT)으로 array, class, interface가 있다.
+참조형 데이터 타입은 선언되면 heap영역에 객체가 생성되며 stack영역에는 heap영역의 주소값이 저장된다.  
+메소드에서 참조타입을 인자로 넘기거나 리턴값을 받을 때 값이 복사되는 Primitive 타입과 달리, 참조타입에서는 주소값이 넘어가기 때문에 이에 유의해야 한다.
 ### 2.1 Class
 class는 객체의 설계도라고 생각하면 된다. class는 프로그램 내에서 직접 사용되는 것이 아니다. 반면 class를 이용해 생성된 object는 메모리 상에 존재한다.
 즉, object는 class의 dynamic instance이고, class는 object의 blueprint이다.
-class를 구성하는 속성들과 메소드를 정의하고 설계하는 것을 클래스 모델링이라고 한다.
+class를 구성하는 속성들과 메소드를 정의하고 설계하는 것을 클래스 모델링이라고 한다.  
+
+참고: [class.md](https://github.com/puzzlepcs/TIL/blob/master/Java/class.md)
 
 ### 2.2 Array
 #### 2.2.1 Array Overview
@@ -69,7 +73,7 @@ class를 구성하는 속성들과 메소드를 정의하고 설계하는 것을
 #### 2.2.2 정의
 같은 데이터 타입의 순서적 나열
 #### 2.2.3 특성
-**선언과 동시에 크기가 결정** 되고 그 크기는 변경될 수 없다. 자료구조 중에 가장 접근이 빠르다. (인덱스로 데이터로 접근한다.)
+**선언과 동시에 크기가 결정 되고 그 크기는 변경될 수 없다.** 자료구조 중에 가장 접근이 빠르다. (인덱스로 데이터로 접근한다.)
 #### 2.2.4 배열의 생성
 배열은 다음과 같이 선언한다. 객체가 만들어지는 동시에 크기가 결정되어야 한다.
 ```
@@ -83,10 +87,12 @@ Java는 C언어와의 호환성을 위해서 C언어의 문법과 비슷한 문�
 ```
   int[] iarr1 = new int[] {1,3,5,7,9};
   int[] iarr2 = {1,3,5,7,9};
-  Member[] cu = {new Member(),new Member(),new Member(),new Member()};
+  Member[] cu = {new Member(),new Member(),new Member(),new Member()};  
 ```
+마지막 경우와 같이 참조타입의 배열을 만드는 경우 배열의 원소인 객체를 만들 생성하기 전 그 객체에 접근하게 되면 NullPointerException 오류가 발생한다. 배열을 만들고 꼭 그 안의 객체를 생성하여야 한다. (맴버 객체의 개열의 객체화와 맴버 객체화 구분하기)
+
 #### 2.2.5 주요 메소드, 속성
-* **for each**: 배열의 값 처리시에 기존의 for문보다 편리하고 빠르게 처리할 수 있다.
+* **foreach** 문: 배열의 값 처리시에 기존의 for문보다 편리하고 빠르게 처리할 수 있다.
   ```
     for(int s: su) {
       System.out.println(s);
@@ -116,7 +122,7 @@ public class ArrayTest5 {
 		}
 
 /*
-*    결과값
+*    ****결과값****
 *    arr1
 *    100, 3, 5, 7, 9,
 *    arr2
