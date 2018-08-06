@@ -52,6 +52,9 @@ JVM은 구현한 벤더마다, 버전마다 메모리 관리 기법이 다르고
   * Class에 관련된 정보를 Class Loader가 이 영역에 로드한다.
   * Method area, Static area등 다양한 영역이 이 영역에 속한다.
 
+#### 3.1.1 Hashcode와 메모리주소
+Hashcode는 실제 메모리의 가상주소를 의미하지 않는다. 개체의 고유 값이라고 생각하면 된다. Java에서는 메모리를 전적으로 JVM이 관리하기 때문에 운영체계가 관리하는 주소 값을 hashing하여 그 hashcode를 관리하는 방식으로 운영한다.
+
 ### 3.2 클래스 생성 과정
 JVM은 `Customer c = new Customer(); ` 라는 코드를 만나는 순간에 `Customer`라는 클래스 타입을 Class area에 **Dynamic Load** 한다. (캐싱되어 있는 경우 로드 되어 있는 정보를 사용한다.)
 그 다음 'Customer.Class' 라는 바이트코드의 Customer라는 클래스가 유효한지 확인하는 **Verify** 과정을 거친다. (이미 로드되어 있는 경우에는 이 과정을 생략할 수 있다. 보안 문제 때문에 다시 검증하기도 한다.)
