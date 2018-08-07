@@ -137,6 +137,7 @@ Access Modifier | Same class | Same package | Subclass | universe
 **public** |Yes|Yes|Yes|Yes
 
 - **private**: 같은 클래스 내에서만 사용할 수 있다.
+  - private 멤버는 상속이 된다. 다만 하위 클래스에서 그 값에 접근할 수 없는 것이다.
 - **(default)**: 아무것도 정의하지 않았을 경우, 같은 클래스, 같은 패키지 내에서만 사용할 수 있다.
 - **protected**: 패키지가 다르면 사용할 수 없으나, 상속을 받았다면 사용할 수 있다.
 - **public**: 어디서나 사용할 수 있다.
