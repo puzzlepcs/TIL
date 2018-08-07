@@ -66,7 +66,7 @@ Method Overriding과 Method Overloading을 혼동하지 않도록 주의하자.
 * method polymorphism
   * 같은 클래스 타입의 메소드 호출 시 그 기능이 다양하게 처리 되어지는 것.
   * Override와 Oveload가 있다.
-  
+
 ## 3. 상속과 다형성
 ### 3.1 상속과 메모리
 #### 3.1.1 상속과 객체 생성 순서
@@ -141,7 +141,7 @@ MainCustomer mc = new Customer();
 // MainCustomer mc = new (MainCustomer) Customer();
 // 명시적형변환시 컴파일에러가 사라지지만 런타임 에러가 발생할 수 있다.
 ```
-![upcastImg02](https://github.com/puzzlepcs/TIL/blob/master/Java/polymorphism02.PNG)
+![upcastImg02](https://github.com/puzzlepcs/TIL/blob/master/Java/img/polymorphism02.PNG)
 
 이러한 다운 캐스팅은 메소드의 인자로 부모 클래스의 타입으로 Upcasting되어 Shadowed된 메소드들과 속성들에 접근하기 위해 사용된다.
 ```
