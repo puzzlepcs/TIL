@@ -151,15 +151,19 @@ for (int i = 0; i < arr2.length; i++) {
 인터페이스는 상수와 구현되지 않은 메소드로만 구성된다. 상수 정의시에 특별히 상수라고 명시하지 않아도 컴파일러에 의해서 상수로 변경된다.(컴파일시 public static final 제한자가 자동으로 변수 앞에 붙는다.) 또한 메소드 정의시에 public하게 정의하지 않아도 인터페이스의 모든 메서드는 컴파일러가 public제한자를 삽입한다. (컴파일시 public abstract 제한자가 메소드 앞에 붙는다.)  
 따라서 인터페이스는 객체화되지 않는 자료형이다.
 * 특별히 정의하지 않아도 컴파일 시에 아래 제한자가 추가된다.
-  - public static final 제한자가 상수 앞에 붙는다.
-  - public abstract 제한자가 메소드 앞에 붙는다.  
-  - 따라서 **메서드 오버라이딩 시 항상 public 제한자** 가 필요하다.  
+  - `public static final` 제한자가 상수 앞에 붙는다.
+    - 따라서 변수의 사용이 불가능하다.
+  - `public abstract` 제한자가 메소드 앞에 붙는다.  
+    - 따라서 **메서드 오버라이딩 시 항상 public 제한자** 가 필요하다.  
 
 #### 2.3.1 Interface의 특징
 - 인터페이스는 객체 생성을 할 수 없다. 구현되지 않은 메소드를 포함하기 때문이다.
 - super type으로 사용할 수 있다.
+  - 설계의 지침으로 사용된다.
+  - 다양한 클래스를 기능으로 묶어줄 수 있다.
+  - 추상 클래스와 유사한 기능
 - 상속되어져서 sub class가 모든 메소드를 구현(Overriding)해야한다.
-- 상속한 sub class들의 명세서 역할로 사용한다.
+- 상속한 sub class들의 *명세서 역할* 로 사용한다.
 - polymorphism 효과
 
 #### 2.3.2 `implement` 키워드, 다중상속과 Upcasting
@@ -168,7 +172,16 @@ for (int i = 0; i < arr2.length; i++) {
   * 여러개의 interface를 implement한 경우 모든 interface의 method를 구현해주어야 한다.
   * 다중상속이 가능하기 때문에 polymorphism 효과가 나타난다.
   * 여러가지의 Upcasting이 가능하다. (Sub class가 Super class 혹은 Interface로 Upcasting이 가능하다.)
+* 아무 기능도 구현하지 않는 Mark Interface
+  * 쿠폰의 용도: 이 기능에서 사용할 수 있는가?
+  * 다양한 종류의 클래스들을 묶어서 Mark Interface로 upcasting하여 사용한다.
+  * 어떠한 기능을 수행해야 하는 클래스들을 묶어서 사용한다.
+
 
 ### 2.4 그밖에...
+#### 2.4.1 class vs interface
+* 계층적 구조 -> class와 상속로 구현
+* 기능 위주 -> interface로 구현
+#### 2.4.2 기타
 - Java에서 문자열 String은 Primitive Type이 아니라, Reference Type이다.
 - 리턴 타입 void는 아무것도 리턴하지 않는다는 의미. 구현부 내에 `return;`을 적어주어야 하나, 이는 의미없는 구문으로 간주되어 대게 생략된다.
