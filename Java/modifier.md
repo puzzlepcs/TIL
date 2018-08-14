@@ -64,7 +64,7 @@ class StaticVarTest {
 객체생성을 하지 않고도 `className.staticMethodName()`로 메소드를 사용할 수 있다.
 
 #### 2.2.1 static 메소드 사용시 주의점
-- static 변수 안에서는 일반 클래스 변수와 클래스 메소드를 사용하면 안된다. 일반 변수와 메소드는 객체 생성 후에 사용가능하기 때문에 static method 내에서는 static variable과 static method만 사용해야 한다.
+- static 메소드 안에서는 일반 클래스 변수와 클래스 메소드를 사용하면 안된다. 일반 변수와 메소드는 객체 생성 후에 사용가능하기 때문에 static method 내에서는 static variable과 static method만 사용해야 한다.
 ```
 class StaticTest {
   int a;
@@ -77,7 +77,7 @@ class StaticTest {
 ```
   * this, super 변수는 사용불가
   * 일반(non-static) 변수나 메소드는 사용불가
-  * Overriding 불가
+  * **Overriding 불가**
 
 ### 2.3 member nested class에서의 static
 member nested class는 클래스 내부에서 사용하는 클래스로, 클래스 내부에서 인스턴스를 생성하여 그 기능을 사용한다. 클래스 내부에서만 사용할 수 있다. 이때, 외부에서 nested class의 인스턴스를 생성하거나 그 메소드를 사용하고 싶으면 static키워드를 사용하면 된다.
@@ -102,7 +102,7 @@ public class StaticInnerClass {
     StaticInnerClass s = new StaticInnerClass();
     s.a = 10;
     s.printStatic();
-    // Inner의 인스턴스가 StaticInnerClass의 인스턴스를 생성하지 않고 바로
+    // Inner의 객체를 StaticInnerClass 객체를 생성하지 않고 바로 생성가능
     StaticInnerClass.Inner in = new StaticInnerClass.Inner();  
     in.printInner();
   }

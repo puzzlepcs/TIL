@@ -4,8 +4,10 @@ java.util 패키지에 정의되어 있으며, 자료구조와 관련된 클래�
 - Collection: 모든 클래스들의 Object를 요소(element)로 저장하는 객체의 최상위 Interface
 
 ## 1. Set
+중복된 값을 저장할 수 없으며 일종의 집합같이 작용하는 자료구조이다.
 
 ## 2. List
+중복된 값을 저장할 수 있으며 index로 값에 접근할 수 있다. 배열과 달리 크기가 유동적(mutable)이다.
 
 ## 3. Map
 객체를 key와 value로 구분한다.

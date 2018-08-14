@@ -1,4 +1,4 @@
-# Android
+# Android Platform
 ## 1. Overview
 ### 1.1 Andriod란?
 - 모바일 디바이스를 위한 소프트웨어 스택
@@ -47,7 +47,7 @@
 ### 1.4 Andrid Platform 관련기술
 - Linux
 - Java
-- **XML** :
+- **XML** 
   - data저장의 용도,
   - 화면 설계의 용도,
   - 통신의 문서교환 형식으로 XML을 사용
@@ -91,7 +91,7 @@ Java를 사용하지만 JVM을 가지고 오지 못하고 그 대신 Dalvic이�
   - CPU가 한가할 때
     - priority가 낮아도 수행할 스레드가 없을 때 수행됨
 
-## 4. 참고사이트
+## 3. 참고사이트
 - 안드로이드 공식 사이트 [www.android.com](https://www.android.com)
 - 안드로이드 개발자를 위한 사이트 [developer.android.com](https://developer.android.com)
   - 안드로이드의 플랫폼 아키텍처, 버전정보등을 볼 수 있다.

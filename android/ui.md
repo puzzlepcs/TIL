@@ -115,8 +115,6 @@ public class UITest extends AppCompatActivity {
         // Event Source
         b = findViewById(R.id.first_button);
         b.setOnClickListener(new MyClick());
-        //b.setOnClickListener(this);
-        //MyClick click = new MyClick();
     }
 
 }
