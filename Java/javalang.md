@@ -84,7 +84,6 @@ String에서 == 와 eqaul() 는 왜 다르게 작용할까? String 객체와 문
 ### 2.4 String의 단점을 보완한 StringBuilder
 String 클래스는 편집시에 처리가 느리다는 단점이 있다. 이런 단점을 보완한 클래스가 StringBuilder, StringBuffer이다.
 - StringBuilder와 StringBuffer의 기능은 비슷하나, StringBuilder가 성능이 더 좋다.  
--
 ```
 public class StringTest {
   public static void main(String[] args) {
@@ -142,6 +141,8 @@ int|Integer|Integer(int value), Integer(String s)
 long|Long|Long(long value), Long(String s)
 float|Float|Float(double value), Float(float value), Float(String s)
 double|Double|Double(double value), Double(String)  
+
+
 Boolean, Character, Number 모두 Object의 자손이며 모든 숫자와 관련된 Wrapper 클래스는 Number의 자손이다.
 
 ### 4.2 Wrapper 클래스의 용도
@@ -159,6 +160,8 @@ public final class Integer extends Number implements Comparable {
   ...
 }
 ```  
+
+
 또한 Wrapper 클래스들은 모두 `equals()` 메소드가 오버라이딩 되어 있어 주소 값이 아닌 객체의 값을 가지고 비교한다.  
 그밖에도 MAX_VALUE, MIN_VALUE, SIZE, TYPE등의 static 멤버를 공통적으로 가지고 있다.
 
@@ -166,7 +169,7 @@ public final class Integer extends Number implements Comparable {
 parse 메소드는 기본형을 반환하지만, valueOf는 Wrapper 클래스를 반환한다.
 
 정리하자면  
-String -> primitive type | String -> Wrapper class
+String -> primitive type | String -> Wrapper class  
 ------|------
 byte b = Byte.parseByte("100");|Byte b = Byte.valueOf("100");
 short s = Short.parseShort("100");|Short s = Short.valueOf("100");
@@ -174,4 +177,6 @@ int i = Integer.parseInt("100");|Integer i = Integer.valueOf("100");
 long l = Long.parseLong("100");|Long l = Long.valueOf("100");
 float f = Float.parseFloat("100");|Float f = Float.valueOf("100");
 double d = Double.parseDouble("100");|Double d = Double.valueOf("100");  
+
+
 JDK 1.5 부터 도입되어 지원되는 autoboxing과 unboxing 때문에 반환값이 기본형일 때와 Wrapper 클래스일 때의 차이가 사라졌다. 현재 valueOf() 메소드를 사용해도 아무 문제가 없지만, 성능을 비교하자면 valueOf() 메소드가 조금 더 느리다.  
