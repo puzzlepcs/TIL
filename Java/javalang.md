@@ -169,8 +169,8 @@ public final class Integer extends Number implements Comparable {
 parse 메소드는 기본형을 반환하지만, valueOf는 Wrapper 클래스를 반환한다.
 
 정리하자면  
-String -> primitive type | String -> Wrapper class  
-------|------
+String to primitive type | String to Wrapper class  
+------|------  
 byte b = Byte.parseByte("100");|Byte b = Byte.valueOf("100");
 short s = Short.parseShort("100");|Short s = Short.valueOf("100");
 int i = Integer.parseInt("100");|Integer i = Integer.valueOf("100");
