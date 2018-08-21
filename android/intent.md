@@ -4,7 +4,7 @@
 - 다음에 실행될 component의 구체적인 행동을 설명한다.
 - `startActivity(Intent)`메소드를 사용해서 ActivityManager에게 전달 intent객체를 넘겨줌. 이러한 구조 때문에 다른 앱의 화면을 호출할 수 있다.  
 
-![img1](https://github.com/puzzlepcs/TIL/blob/master/andriod/img/intent01.PNG)
+![img1](https://github.com/puzzlepcs/TIL/blob/master/android/img/intent01.PNG)
 
 ## 1 Intent 객체의 목적
 Intent 객체를 사용하는 이유는 크게 두가지로 볼 수 있다. 첫번째는 target component를 활성화 시키는 것이며, 두번째는 상대 component에 데이터를 전달하는 것이다.
@@ -28,8 +28,8 @@ Intent 객체를 보낼 component가 명시되어 있는 경우와 그렇지 않
   - 시스템이 즉시 `Intent`객체에서 지정된 앱 구성 요소를 시작한다.  
 
 다음 두 그림은 명시적 인텐트가 작동되는 원리를 보여준다.   
-![img2](https://github.com/puzzlepcs/TIL/blob/master/andriod/img/intent02.PNG)
-![img3](https://github.com/puzzlepcs/TIL/blob/master/andriod/img/intent03.PNG)
+![img2](https://github.com/puzzlepcs/TIL/blob/master/android/img/intent02.PNG)
+![img3](https://github.com/puzzlepcs/TIL/blob/master/android/img/intent03.PNG)
 
 ### 2.2 Implicit Intents
   - 특정 Component를 명시하지 않고, 일정한 조건을 통과한 Component를 찾아가는 방식
