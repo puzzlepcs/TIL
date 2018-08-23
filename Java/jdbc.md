@@ -1,5 +1,5 @@
 # JDBC
-![img01](http://github.com/puzzlepcs/TIL/master/blob/Java/img/jdbc01.PNG)
+![img01](http://github.com/puzzlepcs/TIL/blob/master/Java/img/jdbc01.PNG)
 
 ## JDBC 실행절차
 1. JDBC driver 등록
